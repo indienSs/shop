@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  font-weight: 600;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.profile {
+  margin-right: 30px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  img {
+    cursor: pointer;
+  }
+}
+
+.logo {
+  margin-right: auto;
+  margin-left: 30px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.cart_information {
+  display: flex;
+  margin: 0;
+}
+
+.cart_count {
+  margin-top: 5px;
+  height: 15px;
+  width: 15px;
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: 10px;
+  text-align: center;
+  background-color: #1c62cd;
+  cursor: pointer;
+}
