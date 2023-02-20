@@ -28,7 +28,7 @@ const App: FC = () => {
     <div>
       <Header />
       <Routes>
-        <Route path="/" element={<MainMenu />} />
+        <Route path="/" element={<MainMenu shopItems={shopItems}/>} />
         <Route path="/user" element={<UserInfo />} />
         <Route path="/liked" element={<Liked />} />
         <Route path="/cart" element={<Cart />} />
