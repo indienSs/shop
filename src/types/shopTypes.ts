@@ -5,4 +5,6 @@ export type ShopItem = {
   img: string;
   category: number;
   sale: boolean;
+  favorite: boolean;
+  cart: boolean;
 };

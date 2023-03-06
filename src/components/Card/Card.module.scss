@@ -1,0 +1,49 @@
+.card {
+  height: 360px;
+  width: 200px;
+  border: 1px solid #aaa;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+  &:hover {
+    box-shadow: 5px 5px 5px #aaa;
+    transform: translateY(-5px);
+  }
+
+  .card_photo {
+    height: 250px;
+    width: auto;
+    padding: 10px 10px;
+  }
+
+  .card_info {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    h4,
+    p {
+      margin: 0;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+  }
+
+  .card_heart {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+  }
+
+  .card_plus {
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    cursor: pointer;
+  }
+}
