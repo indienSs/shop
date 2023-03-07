@@ -1,0 +1,17 @@
+.cart_empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart_items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+
+  .pay_button {
+    margin-top: 20px;
+  }
+}

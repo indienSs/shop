@@ -5,3 +5,23 @@ body {
     sans-serif;
 }
 
+button {
+  background: #aaa;
+  color: #fff;
+  border: none;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+
+  &:active {
+    background: lighten(#aaa, 5%);
+  }
+}
+
+input {
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+}

@@ -8,8 +8,14 @@ import heart from "../../assets/img/heart.svg";
 import user from "../../assets/img/profile.svg";
 import cart from "../../assets/img/cart.svg";
 import logo from "../../assets/img/logo.png";
+import { useSelector } from "react-redux";
+import { shopItemsSelector } from "../../redux/shopReducer/selectors";
 
 const Header: FC = () => {
+  const shopItems = useSelector(shopItemsSelector);
+
+  const cartCount: number = shopItems.filter((el) => el.cart).length;
+
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
@@ -39,7 +45,7 @@ const Header: FC = () => {
         <Link to="/cart">
           <div className={styles.cart_information}>
             <img src={cart} alt="cart" width="20px" />
-            <div className={styles.cart_count}>0</div>
+            <div className={styles.cart_count}>{cartCount}</div>
           </div>
         </Link>
       </div>
