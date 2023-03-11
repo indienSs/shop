@@ -26,7 +26,7 @@ const Cart = () => {
       {cartAddedItems.map((el) => (
         <CartItem key={el.id} {...el} />
       ))}
-      <button className={styles.pay_button}>Оплатить</button>
+      <button className={styles.pay_button}>Оформить</button>
     </div>
   );
 };

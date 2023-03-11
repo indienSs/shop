@@ -23,7 +23,7 @@ const UserInfo: FC = () => {
   };
 
   const exitAccount = () => {
-    dispatch(removeUserName);
+    dispatch(removeUserName());
   };
 
   if (userName) {
