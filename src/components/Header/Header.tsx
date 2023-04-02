@@ -9,7 +9,7 @@ import user from "../../assets/img/profile.svg";
 import cart from "../../assets/img/cart.svg";
 import logo from "../../assets/img/logo.png";
 import { useSelector } from "react-redux";
-import { shopItemsSelector } from "../../redux/shopReducer/selectors";
+import { shopItemsSelector } from "../../redux/slices/shopReducer";
 
 const Header: FC = () => {
   const shopItems = useSelector(shopItemsSelector);

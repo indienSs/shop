@@ -1,30 +1,18 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import axios from "axios";
-
-import Cart from "./components/Cart";
-import Header from "./components/Header";
-import Liked from "./components/Liked";
-import MainMenu from "./components/MainMenu";
-import UserInfo from "./components/UserInfo";
-
-import { ShopItem } from "./types/shopTypes";
-import { useDispatch, useSelector } from "react-redux";
-import { shopItemsSelector } from "./redux/shopReducer/selectors";
-import { setItems } from "./redux/shopReducer/slice";
+import Cart from "./components/Cart/Cart";
+import Header from "./components/Header/Header";
+import Liked from "./components/Liked/Liked";
+import MainMenu from "./components/MainMenu/MainMenu";
+import UserInfo from "./components/UserInfo/UserInfo";
+import { fetchItems } from "./redux/slices/shopReducer";
+import { useAppDispatch } from "./redux/store";
 
 const App: FC = () => {
-  const shopItems = useSelector(shopItemsSelector);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    async function fetchData() {
-      const { data } = await axios.get<ShopItem[]>(
-        "https://63c7e988e52516043f472858.mockapi.io/shop_items"
-      );
-      dispatch(setItems(data));
-    }
-    fetchData();
+    dispatch(fetchItems());
   }, []);
 
   return (

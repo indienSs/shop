@@ -8,7 +8,7 @@ import plus from "../../assets/img/plus.png";
 import liked from "../../assets/img/heartclicked.png";
 import checked from "../../assets/img/checked.png";
 import { useDispatch } from "react-redux";
-import { setFavoriteItem, setCartItem } from "../../redux/shopReducer/slice";
+import { setFavoriteItem, setCartItem } from "../../redux/slices/shopReducer";
 
 const Card: FC<ShopItem> = (shopItem) => {
   const dispatch = useDispatch();

@@ -1,13 +1,17 @@
 import { configureStore } from "@reduxjs/toolkit";
-import itemsSlice from "./shopReducer/slice";
-import userSlice from "./userReducer/slice";
+import { itemsReducer } from "./slices/shopReducer";
+import { userReducer } from "./slices/userReducer";
+import { useDispatch } from "react-redux";
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
-    shopItems: itemsSlice,
-    user: userSlice,
+    shopItems: itemsReducer,
+    user: userReducer,
   },
 });
+
 export type RootState = ReturnType<typeof store.getState>;
 
-export default store;
+type AppDispatch = typeof store.dispatch;
+
+export const useAppDispatch = () => useDispatch<AppDispatch>();

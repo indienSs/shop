@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setCartItem } from "../../redux/shopReducer/slice";
+import { setCartItem } from "../../redux/slices/shopReducer";
 import { ShopItem } from "../../types/shopTypes";
 
 import styles from "./CartItem.module.scss";

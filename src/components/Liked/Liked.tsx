@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { shopItemsSelector } from "../../redux/shopReducer/selectors";
-import Card from "../Card";
+import { shopItemsSelector } from "../../redux/slices/shopReducer";
+import Card from "../Card/Card";
 
 import styles from "./Liked.module.scss";
 

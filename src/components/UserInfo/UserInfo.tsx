@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { userSelector } from "../../redux/userReducer/selectors";
-import { removeUserName, setUserName } from "../../redux/userReducer/slice";
+import { userSelector } from "../../redux/slices/userReducer";
+import { removeUserName, setUserName } from "../../redux/slices/userReducer";
 import userPicture from "../../assets/img/userpicture.png";
 
 import styles from "./UserInfo.module.scss";

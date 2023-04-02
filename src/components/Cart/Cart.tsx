@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { shopItemsSelector } from "../../redux/shopReducer/selectors";
-import CartItem from "../CartItem";
+import { shopItemsSelector } from "../../redux/slices/shopReducer";
+import CartItem from "../CartItem/CartItem";
 
 import styles from "./Cart.module.scss";
 
